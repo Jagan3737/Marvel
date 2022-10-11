@@ -53,8 +53,8 @@ hash = hash_params()
 
 characters = list(string.ascii_lowercase)
 
-# get_character_data(pub_key, hash, characters) # TAKES LONG TIME TO GET RESULTS
-get_character_data(pub_key, hash, ['s']) # Only taking character 's' to to get results fast
+get_character_data(pub_key, hash, characters) # TAKES LONG TIME TO GET RESULTS
+# get_character_data(pub_key, hash, ['s']) # Only taking character 's' to to get results fast
 
 marvel_df = pd.DataFrame(data)
 
