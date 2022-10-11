@@ -10,7 +10,7 @@ import string
 
 load_dotenv()
 
-timestamp = datetime.now().strftime('%Y-%m-%d%H:%M:%S')
+timestamp = datetime.now()
 pub_key = os.getenv('PUBLIC_KEY')
 priv_key = os.getenv('PRIVATE_KEY')
 
@@ -41,8 +41,7 @@ def get_character_data(api_key, hash=None, characters=[]):
                     data['character_name'].append(i['name'])
                     data['event_appearances'].append(i['events']['available'])
                     data['series_appearances'].append(i['series']['available'])
-                    data['stories_appearances'].append(
-                        i['stories']['available'])
+                    data['stories_appearances'].append(i['stories']['available'])
                     data['comics_appearances'].append(i['comics']['available'])
                     data['character_id'].append(i['id'])
     except:

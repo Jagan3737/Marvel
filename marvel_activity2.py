@@ -9,7 +9,7 @@ import pandas as pd
 
 load_dotenv()
 
-timestamp = datetime.now().strftime('%Y-%m-%d%H:%M:%S')
+timestamp = datetime.now()
 pub_key = os.getenv('PUBLIC_KEY')
 priv_key = os.getenv('PRIVATE_KEY')
 

@@ -1,4 +1,3 @@
-#Source code - https://gist.github.com/farleykr/cc77fae2df679de05148e6acbcc0893d
 
 import requests  
 from datetime import datetime
@@ -9,7 +8,7 @@ import os
 
 load_dotenv()
 
-timestamp = datetime.now().strftime('%Y-%m-%d%H:%M:%S')
+timestamp = datetime.now()
 pub_key = os.getenv('PUBLIC_KEY')
 priv_key = os.getenv('PRIVATE_KEY')
 
