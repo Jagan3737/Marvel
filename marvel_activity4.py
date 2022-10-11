@@ -53,8 +53,16 @@ hash = hash_params()
 
 characters = list(string.ascii_lowercase)
 
-get_character_data(pub_key, hash, characters)
-# get_character_data(pub_key)
+# get_character_data(pub_key, hash, characters)
+get_character_data(pub_key, hash, ['s'])
 
 marvel_df = pd.DataFrame(data)
-print(marvel_df)
+
+def filter_character_data(df, column, filter_condition):
+    filtered_data_df = df[df[column]>filter_condition]
+    return filtered_data_df
+
+marvel_filtered_df = filter_character_data(marvel_df,'series_appearances',10)
+print(marvel_filtered_df)
+
+
