@@ -110,5 +110,6 @@ elif column == 6:
         marvel_df, column_dict[column], 3, value)
 else:
     marvel_filtered_df = 'Wrong Choice'
-# marvel_filtered_df = filter_character_data(marvel_df,'series_appearances',10)
+
+
 print(marvel_filtered_df)
