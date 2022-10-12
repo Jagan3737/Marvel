@@ -1,6 +1,10 @@
 import requests
 
+
 def get_character_data(data, timestamp, api_key, hash=None, characters=[]):
+    ''' This function is taking all the characters as parameter. Then it is looping 
+        through each character and adding the data to the dictionary'''
+
     try:
         for letter in characters:
             for offset in range(3):
@@ -22,5 +26,3 @@ def get_character_data(data, timestamp, api_key, hash=None, characters=[]):
         return data
     except:
         print('API or Hash keys are missing')
-
-    

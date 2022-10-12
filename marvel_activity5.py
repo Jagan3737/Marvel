@@ -27,13 +27,16 @@ data = {'character_name': [], 'event_appearances': [], 'series_appearances': [],
 # Getting hash value using timestamp, public-key and private-key as parameters
 hash = hash_params(timestamp, pub_key, priv_key)
 
-#List of characters from 'a' to 'z'
+# List of characters from 'a' to 'z'
 characters = list(string.ascii_lowercase)
 
-#Passing the characters as parameter and getting 
-final_data = get_character_data(data, timestamp, pub_key, hash, characters) # TAKES LONG TIME TO GET RESULTS
+# Passing the characters as parameter and getting
+# TAKES LONG TIME TO GET RESULTS
+final_data = get_character_data(data, timestamp, pub_key, hash, characters)
 # final_data = get_character_data(data, timestamp, pub_key, hash, ['s']) # Only taking character 's' to to get results fast
 
+# Converting data into a dataframe
 marvel_df = pd.DataFrame(final_data)
 
+# Printing the final result
 print(filtering_data(marvel_df))
