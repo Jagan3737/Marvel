@@ -17,12 +17,16 @@ load_dotenv()
 
 # Getting timestamp, public-key and private-key
 timestamp = datetime.now()
-pub_key = os.getenv('PUBLIC_KEY')
-priv_key = os.getenv('PRIVATE_KEY')
+# pub_key = os.getenv('PUBLIC_KEY')
+# priv_key = os.getenv('PRIVATE_KEY')
 
 # Creating dictionary with required keys
 data = {'character_name': [], 'event_appearances': [], 'series_appearances': [],
         'stories_appearances': [], 'comics_appearances': [], 'character_id': []}
+
+# Getting public and private key from user
+pub_key = input('Enter public key: ')
+priv_key = input('Enter private key: ')
 
 # Getting hash value using timestamp, public-key and private-key as parameters
 hash = hash_params(timestamp, pub_key, priv_key)
