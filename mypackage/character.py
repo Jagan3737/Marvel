@@ -18,5 +18,9 @@ def get_character_data(data, timestamp, api_key, hash=None, characters=[]):
                         i['stories']['available'])
                     data['comics_appearances'].append(i['comics']['available'])
                     data['character_id'].append(i['id'])
+
+        return data
     except:
         print('API or Hash keys are missing')
+
+    
