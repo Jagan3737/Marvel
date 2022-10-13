@@ -1,0 +1,12 @@
+README.md
+setup.py
+jagan_marvel.egg-info/PKG-INFO
+jagan_marvel.egg-info/SOURCES.txt
+jagan_marvel.egg-info/dependency_links.txt
+jagan_marvel.egg-info/top_level.txt
+mypackage/__init__.py
+mypackage/character.py
+mypackage/filter_via_name.py
+mypackage/filter_via_others.py
+mypackage/filtering_data.py
+mypackage/hash_function.py

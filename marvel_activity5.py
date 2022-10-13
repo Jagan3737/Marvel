@@ -40,8 +40,7 @@ hash = hash_params(timestamp, pub_key, priv_key)
 characters = list(string.ascii_lowercase)
 
 # Passing the characters as parameter and getting
-# TAKES LONG TIME TO GET RESULTS
-final_data = get_character_data(data, timestamp, pub_key, hash, characters)
+final_data = get_character_data(data, timestamp, pub_key, hash, characters) # TAKES LONG TIME TO GET RESULTS
 # final_data = get_character_data(data, timestamp, pub_key, hash, ['s']) # Only taking character 's' to to get results fast
 
 # Converting data into a dataframe
