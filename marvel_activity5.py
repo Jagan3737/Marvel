@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 import string
+import argparse
 
 # Importing functions from mypackage folder
 from mypackage.hash_function import hash_params
@@ -25,8 +26,12 @@ data = {'character_name': [], 'event_appearances': [], 'series_appearances': [],
         'stories_appearances': [], 'comics_appearances': [], 'character_id': []}
 
 # Getting public and private key from user
-pub_key = input('Enter public key: ')
-priv_key = input('Enter private key: ')
+parser= argparse.ArgumentParser(description="Enter the keys")
+parser.add_argument('pub_key', type=str, help='Enter the public-key')
+parser.add_argument('priv_key', type=str, help='Enter the private-key')
+args=parser.parse_args()
+pub_key= getattr(args, 'pub_key', 'public-key is not entered')
+priv_key=getattr(args, 'priv_key', 'private-key is not entered')
 
 # Getting hash value using timestamp, public-key and private-key as parameters
 hash = hash_params(timestamp, pub_key, priv_key)
